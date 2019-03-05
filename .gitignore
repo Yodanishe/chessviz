@@ -1,0 +1,5 @@
+#Artfct
+*.o
+#Backup
+.main.c.swp
+main.c~
