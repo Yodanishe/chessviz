@@ -1,5 +1,7 @@
+!makefile
 #Artfct
 *.o
+*
 #Backup
-.main.c.swp
-main.c~
+.chessviz.c.swp
+chessviz.c~
