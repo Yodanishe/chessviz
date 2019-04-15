@@ -1,7 +1,10 @@
 #include <stdio.h>
+#include "board.h"
+#include "board_print.h"
 
-int main() {
-	char board[9][9] = {{'R', 'H', 'B', 'Q', 'K', 'B', 'H', 'R'},
+char turn[11];
+int X1, X2, Y1, Y2;
+char board[9][9] = {{'R', 'H', 'B', 'Q', 'K', 'B', 'H', 'R'},
 	{'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
 	{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
 	{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
@@ -9,21 +12,17 @@ int main() {
 	{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
 	{'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
 	{'r', 'h', 'b', 'k', 'q', 'b', 'h', 'r'}};
-	int i, j;
 
-	for (i = 0; i < 8; i++) {
-		printf("%d| ", i + 1);
-		for (j = 0; j < 8; j++) {
-			printf("%c ", board[i][j]);
-		}
-		printf("\n");
+int main() {
+	printboard();
+	while(1) {
+		turn_scan(1);
+		move();
+		printboard();
+
+		turn_scan(2);
+		move();
+		printboard();
 	}
-
-	printf("   ");
-
-	for (i = 0; i < 8; i++)
-	printf("%c ", i + 65);
-	printf("\n");
-
 	return 0;
 }
