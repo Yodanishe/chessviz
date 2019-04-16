@@ -11,4 +11,4 @@ build/board.o: src/board.c
 	gcc -Wall -Werror -c src/board.c -o build/board.o
 
 clean:
-	rm -rf build/*.o
+	rm -rf build/*.o chessviz
