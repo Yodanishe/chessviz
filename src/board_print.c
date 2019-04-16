@@ -1,7 +1,7 @@
 #include "board_print.h"
 #include <stdio.h>
 
-extern char board[9][9];
+extern char board[8][8];
 
 void printboard() {
 	int i, j;

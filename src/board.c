@@ -4,7 +4,7 @@
 
 extern char turn[11];
 extern int X1, X2, Y1, Y2;
-extern char board[9][9];
+extern char board[8][8];
 
 void turn_scan(int flag)
 {
