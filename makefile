@@ -1,5 +1,5 @@
-bin/chessviz: build/main.o build/board_print.o build/board.o
-	gcc -Wall -Werror build/main.o build/board_print.o build/board.o -o bin/chessviz
+chessviz: build/main.o build/board_print.o build/board.o
+	gcc -Wall -Werror build/main.o build/board_print.o build/board.o -o chessviz
 
 build/main.o: src/main.c
 	gcc -Wall -Werror -c src/main.c -o build/main.o
