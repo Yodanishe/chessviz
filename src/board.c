@@ -8,16 +8,16 @@ extern char board[8][8];
 
 void turn_scan(int flag)
 {
+    while (1) {
 	while (1) {
-		while (1) {
-			fgets(turn, 11, stdin);
-			if (chartoint(turn)) {
-				break;
-			}
-			printf("Wrong input, try again:");
-		}
-	break;
-	}
+	    fgets(turn, 11, stdin);
+	    if (chartoint(turn)) {
+		break;
+	    }
+	    printf("Wrong input, try again:");
+	    }
+    break;
+    }
 }
 
 int chartoint(char turn[11])
@@ -39,7 +39,8 @@ int chartoint(char turn[11])
     return 0;
 }
 
-void move() {
-	board[Y2][X2] = board[Y1][X1];
-	board[Y1][X1] = ' ';
+void move()
+{
+    board[Y2][X2] = board[Y1][X1];
+    board[Y1][X1] = ' ';
 }
