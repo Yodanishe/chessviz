@@ -3,5 +3,4 @@
 *.o
 *.gmh
 #Backup
-.chessviz.c.swp
-chessviz.c~
+*.nfs*
