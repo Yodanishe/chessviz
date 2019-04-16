@@ -4,7 +4,7 @@
 
 char turn[11];
 int X1, X2, Y1, Y2;
-char board[9][9] = {{'R', 'H', 'B', 'Q', 'K', 'B', 'H', 'R'},
+char board[8][8] = {{'R', 'H', 'B', 'Q', 'K', 'B', 'H', 'R'},
 	{'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
 	{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
 	{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
@@ -15,7 +15,8 @@ char board[9][9] = {{'R', 'H', 'B', 'Q', 'K', 'B', 'H', 'R'},
 
 int main() {
 	printboard();
-	while(1) {
+	printf("Example of turn:'A1-A3'\nFor close press Ctrl+Z\nPlease input a turn:");
+	while(1){
 		turn_scan(1);
 		move();
 		printboard();
