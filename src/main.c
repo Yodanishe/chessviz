@@ -16,7 +16,8 @@ char board[8][8] = {{'R', 'H', 'B', 'Q', 'K', 'B', 'H', 'R'},
 int main()
 {
     printboard();
-    printf("Example of turn:'A1-A3'\nFor close press Ctrl+Z\nPlease input a turn:");
+    printf("Example of turn:'A1-A3'\nFor close press Ctrl+Z\nPlease input a "
+        "turn:");
     while(1){
         turn_scan(1);
         move();
@@ -25,6 +26,6 @@ int main()
         turn_scan(2);
         move();
         printboard();
-        }
+    }
     return 0;
 }

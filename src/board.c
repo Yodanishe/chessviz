@@ -33,7 +33,8 @@ int chartoint(char turn[11])
         printf("Nothing to capture.\n");
         return 0;
     }
-    if ((X2 < 8) && (X2 >= 0) && (Y2 >= 0) && (Y2 < 8) && (X1 >= 0) && (X1 < 8) && (Y1 >= 0) && (Y1 < 8))
+    if ((X2 < 8) && (X2 >= 0) && (Y2 >= 0) && (Y2 < 8) && (X1 >= 0) && (X1 < 8)
+        && (Y1 >= 0) && (Y1 < 8))
         return 1;
     return 0;
 }
