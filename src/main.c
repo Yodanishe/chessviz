@@ -17,8 +17,8 @@ int main()
 {
     printboard();
     printf("Example of turn:'A1-A3'\nFor close press Ctrl+Z\nPlease input a "
-          "turn:");
-    while(1){
+           "turn:");
+    while (1) {
         turn_scan(1);
         move();
         printboard();
