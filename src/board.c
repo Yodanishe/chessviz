@@ -15,8 +15,8 @@ void turn_scan(int flag)
                 break;
             }
             printf("Wrong input, try again:");
-            break;
-        }
+            }
+        break;
     }
 }
 
