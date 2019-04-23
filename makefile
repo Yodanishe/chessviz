@@ -1,3 +1,4 @@
+.PHONY: clean
 chessviz: build/main.o build/board_print.o build/board.o
 	gcc -Wall -Werror build/main.o build/board_print.o build/board.o -o chessviz
 
