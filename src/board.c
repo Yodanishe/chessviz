@@ -14,8 +14,8 @@ void turn_scan(int flag)
             if (chartoint(turn)) {
                 break;
             }
-            printf("Wrong input, try again:");
-            }
+        printf("Wrong input, try again:");
+        }
         break;
     }
 }
