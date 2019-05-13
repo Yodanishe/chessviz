@@ -1,15 +1,29 @@
+all: bin/chessviz bin/chessviz-test
+
+bin/chessviz: build/src/main.o build/src/board_print.o build/src/board.o
+	gcc -Wall -Werror build/src/main.o build/src/board_print.o build/src/board.o -o bin/chessviz
+
+build/src/main.o: src/main.c
+	gcc -Wall -Werror -c src/main.c -o build/src/main.o
+
+build/src/board_print.o: src/board_print.c
+	gcc -Wall -Werror -c src/board_print.c -o build/src/board_print.o
+
+build/src/board.o: src/board.c
+	gcc -Wall -Werror -c src/board.c -o build/src/board.o
+
+
+bin/chessviz-test: build/test/main.o build/test/board_test.o build/src/board.o build/src/board_print.o
+	gcc -Wall -Werror build/test/main.o build/test/board_test.o build/src/board.o build/src/board_print.o -o bin/chessviz-test
+
+build/test/main.o: test/main.c
+	gcc -I thirdparty -Wall -Werror -c test/main.c -o build/test/main.o
+
+build/test/board_test.o: test/board_test.c
+	gcc -I thirdparty -Wall -Werror -c test/board_test.c -o build/test/board_test.o
+
+
 .PHONY: clean
-bin/chessviz: build/main.o build/board_print.o build/board.o
-	gcc -Wall -Werror build/main.o build/board_print.o build/board.o -o bin/chessviz
-
-build/main.o: src/main.c
-	gcc -Wall -Werror -c src/main.c -o build/main.o
-
-build/board_print.o: src/board_print.c
-	gcc -Wall -Werror -c src/board_print.c -o build/board_print.o
-
-build/board.o: src/board.c
-	gcc -Wall -Werror -c src/board.c -o build/board.o
 
 clean:
-	rm -rf build/*.o bin/chessviz
+	rm -rf build/*.o
