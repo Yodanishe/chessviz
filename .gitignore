@@ -1,8 +1,5 @@
-!makefile
-#Artfct
+.clang-format
+main
 *.o
-*.gmh
-#Backup
-*.nfs*
-*
-!*.c
+chessviz
+chessviz-test
