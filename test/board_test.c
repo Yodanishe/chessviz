@@ -72,7 +72,7 @@ CTEST(moving, movewhitepawn) // Test P
     chartoint(turn);
     int c5 = white();
 
-    strcpy(turn, "E3xF4"); // Catch
+    strcpy(turn, "E3xF4"); // Capture
     chartoint(turn);
     board[Y2][X2] = 'p';
     int c6 = white();

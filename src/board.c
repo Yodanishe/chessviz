@@ -58,7 +58,7 @@ int white()
         return 0;
     }
     switch (board[Y1][X1]) {
-    case 'P':
+    case 'P': {
         if ((turn[2] == '-') && (board[Y2][X2] != ' ')) {
             printf("You need to capture.\n");
             break;
@@ -74,7 +74,7 @@ int white()
             && ((X2 - X1 == 1) || (X2 - X1 == -1)) && (Y2 - Y1 == 1)
             && (turn[2] == 'x')) {
             return 1;
-        }
+        }}
         break;
     case 'R':
         if ((turn[2] == '-') && (board[Y2][X2] != ' ')) {
